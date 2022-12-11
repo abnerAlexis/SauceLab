@@ -2,9 +2,9 @@
 export class Inventory {
     #buttonAddBackPack = '[data-test="add-to-cart-sauce-labs-backpack"]';
     #buttonRemoveBackPack = '[data-test="remove-sauce-labs-backpack"]';
-    #buttonAddBikeLight = '#item_0_title_link > .inventory_item_name';
+    #buttonAddBikeLight = '[data-test="add-to-cart-sauce-labs-bike-light"]';
     #buttonremoveBikeLight = '[data-test="remove-sauce-labs-bike-light"]';
-    #buttonAddBoltTShirt = '#item_1_title_link > .inventory_item_name'; 
+    #buttonAddBoltTShirt = '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'; 
     #buttonRemoveBoltShirt = '[data-test="remove-sauce-labs-bolt-t-shirt"]';  
     #buttonAddFleeceJacket = '[data-test="add-to-cart-sauce-labs-fleece-jacket"]';
     #buttonRemoveFleeceJacket = '[data-test="remove-sauce-labs-fleece-jacket"]';
