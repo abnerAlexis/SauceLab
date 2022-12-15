@@ -3,11 +3,13 @@ import { Inventory } from "./pages/inventory";
 import {LoginPage} from "./pages/loginPage";
 import {Cart} from "./pages/cart";
 import {Checkout} from "./pages/checkout";
+import {Overview} from "./pages/overview";
 
 const loginPage = new LoginPage();
 const inventory = new Inventory();
 const cart = new Cart();
 const checkOut = new Checkout();
+const overview = new Overview();
 
 var userName = 'standard_user';
 var password = 'secret_sauce';
@@ -37,5 +39,19 @@ it('Sauce Demo', () => {
             .enterLastname()
             .enterZipcode()
             .completeShopping();
+    overview.validateNumberOfItemsInShoppingCart('3')
+            .validateBackpackLabel('Sauce Labs Backpack')
+            .validateBackpackQuantity('1')
+            .validateBackpackPrice('$29.99')
+            .validateBoltTShirtLabel('Sauce Labs Bolt T-Shirt')
+            .validateBoltTShirtQuantity('1')
+            .validateBoltTShirtPrice('$15.99')
+            .validateBikeLightLabel('Sauce Labs Bike Light')
+            .validateBikeLightQuantity('1')
+            .validateBikeLigthPrice('$9.99')
+            .validateSubTotal('Item total: $55.97')
+            .validateTax('Tax: $4.48')
+            .validateTotalPayment('Total: $60.45')
+            .finishShopping();
 });
 
